@@ -1,0 +1,38 @@
+<h2 class="text-center">Users</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>City</th>
+      <th>Street</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        <a routerLink="/users/{{ user.id }}">{{ user.id }}</a>
+      </td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.address.city }}</td>
+      <td>{{ user.address.street }}</td>
+      <td class="d-flex justify-content-center">
+        <a
+          routerLink="{{ user.id }}/edit"
+          class="btn btn-secondary inline mr-1"
+          >Edit</a
+        >
+        <a (click)="deleteUser(user.id)" class="btn btn-danger inline"
+          >Delete</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

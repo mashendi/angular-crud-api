@@ -1,0 +1,81 @@
+<h2 class="mb-3">Edit User</h2>
+
+<form (ngSubmit)="saveUser()" [formGroup]="formValidation">
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control text-center"
+      placeholder="Name"
+      name="name"
+      [(ngModel)]="name"
+      formControlName="name"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="nameErr">
+      Name is required and must be more than 3 characters
+    </div>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control text-center"
+      placeholder="Age"
+      name="age"
+      [(ngModel)]="age"
+      formControlName="age"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="ageErr">
+      Age is required and must be over 18.
+    </div>
+  </div>
+  <div class="mb-3">
+    <input
+      type="email"
+      class="form-control text-center"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="email"
+      formControlName="email"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="emailErr">
+      Email is required
+    </div>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control text-center"
+      placeholder="Phone"
+      name="phone"
+      [(ngModel)]="phone"
+      formControlName="phone"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="phoneErr">
+      Phone is required
+    </div>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control text-center"
+      placeholder="City"
+      name="city"
+      [(ngModel)]="city"
+      formControlName="city"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="cityErr">City is required</div>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control text-center"
+      placeholder="Street"
+      name="street"
+      [(ngModel)]="street"
+      formControlName="street"
+    />
+    <div class="alert alert-danger mt-2" *ngIf="streetErr">
+      Street is required
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Save</button>
+</form>
