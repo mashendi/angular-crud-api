@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "name": "muhammed",
+      "age": 27,
+      "email": "muhammedshendi@gmail.com",
+      "phone": "01141350404",
+      "address": {
+        "city": "dikirnis",
+        "street": "el ba7r"
+      },
+      "id": 1
+    }
+  ]
+}
